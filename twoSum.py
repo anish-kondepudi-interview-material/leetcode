@@ -1,5 +1,5 @@
 class Solution:
-    # Total: O(n)
+    # Total: O(nlogn)
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         prevSeen = {}
         for i, num in enumerate(nums):
