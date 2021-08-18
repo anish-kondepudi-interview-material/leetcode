@@ -17,3 +17,26 @@ class Solution:
             return (isSame(root1.left, root2.left) and isSame(root1.right,root2.right))
         
         return isSame(p,q)
+
+
+# More optimal Solution
+class Solution:
+    def isSymmetric(self, root: Optional[TreeNode]) -> bool:
+        
+        def isSymmetric(root1, root2):
+
+            if root1 == None and root2 == None:
+                return True
+
+            if root1 == None or root2 == None:
+                return False
+            
+            if root1.val == root2.val:
+                return isSymmetric(root1.left,root2.right) and isSymmetric(root1.right,root2.left)
+            
+            return False
+            
+        if root == None:
+                return True
+        
+        return isSymmetric(root,root)
