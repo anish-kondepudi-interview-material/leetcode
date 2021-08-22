@@ -45,4 +45,42 @@ class Solution:
             
         return True
         
-        
+# JavaScript Cleaner Code (https://leetcode.com/problems/palindrome-linked-list/discuss/1419886/95-faster-JS-solution-with-O(1)-space-complexity)
+# var isPalindrome = function(head) {
+#     //edage case
+#     if (!head) return true;
+    
+#     //find the middle point use two point runner 
+#     let slow = head;
+#     let fast = head;
+#     let wholeList = head;
+#     while (fast.next && fast.next.next) {
+#         slow = slow.next;
+#         fast = fast.next.next;
+#     }
+#     //flip the second half
+#     let secondHalf = reverseList(slow.next);
+    
+#     //compare with secondHalf with wholelist
+#     while(secondHalf){
+#         if (secondHalf.val !== wholeList.val) return false;
+#         secondHalf = secondHalf.next;
+#         wholeList = wholeList.next;
+#     }
+    
+#     return true;
+# };
+
+# const reverseList = (head) => {
+#     if (!head) return null;
+    
+#     let prev = null;
+#     while (head) {
+#       let temp = head.next;
+#         head.next = prev;
+#         prev = head;
+#         head = temp;
+#     }
+    
+#     return prev;
+# }
