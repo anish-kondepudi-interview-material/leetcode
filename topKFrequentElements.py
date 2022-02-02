@@ -33,9 +33,9 @@ class Solution:
 
 #         topKFreqEl = []
 #         for arr in reversed(countArr):
-#             if k == 0: break
-#             while len(arr) != 0:
-#                 topKFreqEl.append(arr.pop())
-#                 k -= 1
+#             for num in arr:
+#                 topKFreqEl.append(num)
+#                 if len(topKFreqEl) == k:
+#                     return topKFreqEl
 
-#         return topKFreqEl
+#         return []
